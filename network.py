@@ -61,6 +61,6 @@ class Net(nn.Module):
         x = flatten(x, 1)
         #fully-connected
         x = F.relu( self.dropout( self.ln1(self.fc1(x) )) )
-        x = self.fc2(x) #Note: No dropout in final layer. Previously put dropout in output layer (loss: 200+); Removed dropout in output layer (loss: <1). As stated in Hinton (2012).
+        x = self.fc2(x) #Note: No dropout in final layer, as stated in Hinton (2012)
                         #Note: No activation in final layer since crossentropyloss
         return x
