@@ -23,6 +23,4 @@ class Metrics():
         y_true[label] = label
         y_pred = output
         ap = ap_score(y_true, y_pred, pos_label=label)
-        return ap
-
-#metrics = Metrics(); print(metrics.get_r2([0, 0, 2, 0, 0], [2], ['a', 'b', 'c', 'd', 'e']))       
+        return ap    
