@@ -11,8 +11,8 @@ class RoadSignDataset(Dataset):
         self.valset = []
         self.transform = transform
         self.smote_state = smote_state
-        self.trainSample_dist = [] # <Neatify>
-        self.smoteSample_dist = [] # <Neatify>
+        self.trainSample_dist = []
+        self.smoteSample_dist = []
 
     def get_images(self):
         # get training + validation path directory
